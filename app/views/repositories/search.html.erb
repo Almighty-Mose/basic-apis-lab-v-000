@@ -6,13 +6,15 @@
 <% end %>
 
 <div>
-  <% @repos.each do |repo| %>
+  <% if @repos %>
     <ul>
-      <li>
-        <%= repo.name %>
-        <%= repo.description %>
-      </li>
-      
+      <% @repos.each do |repo| %>
+        <li>
+          <%= repo.name %>
+          <%= repo.description %>
+        </li>
+      <% end %>
     </ul>
+  <% end %>  
 </div>
 
