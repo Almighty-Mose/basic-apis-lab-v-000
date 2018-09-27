@@ -13,6 +13,9 @@ class RepositoriesController < ApplicationController
     #   req.params['query'] = 'coffee shop'
     # end
     # render 'search'
-    Faraday.get 'https://api.github.com/'
+    Faraday.get 'https://api.github.com/search/repositories' do |req|
+      req.params['client_id'] =
+      req.params['client_secret'] =
+      req.params['q'] = 'tetris'
   end
 end
