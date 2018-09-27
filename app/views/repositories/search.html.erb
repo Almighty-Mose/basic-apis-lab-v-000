@@ -10,7 +10,8 @@
     <ul>
       <% @repos.each do |repo| %>
         <li>
-          <%= repo.name %>
+          <%= repo["name"] %>
+          <%= repo["description"] %>
         </li>
       <% end %>
     </ul>
