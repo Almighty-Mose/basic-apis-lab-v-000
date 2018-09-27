@@ -17,5 +17,7 @@ class RepositoriesController < ApplicationController
       req.params['client_id'] =
       req.params['client_secret'] =
       req.params['q'] = 'tetris'
+    end
+    render 'search'
   end
 end
