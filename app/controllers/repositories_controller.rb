@@ -20,7 +20,7 @@ class RepositoriesController < ApplicationController
     end
     
     body = JSON.parse(@resp.body)
-    @repos = body["items"]
+    @repos = body["items"]["name"]
     
     render 'search'
   end
