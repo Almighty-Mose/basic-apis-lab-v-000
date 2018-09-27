@@ -13,5 +13,6 @@ class RepositoriesController < ApplicationController
     #   req.params['query'] = 'coffee shop'
     # end
     # render 'search'
+    Faraday.get 'https://api.github.com/'
   end
 end
